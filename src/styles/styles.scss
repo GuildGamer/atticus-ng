@@ -1,0 +1,448 @@
+/* You can add global styles to this file, and also import other style files */
+// $global-link-color: #14da02;
+$global-font-family: 'Cormorant Garamond', serif;
+$global-font-size: 22px;
+//define overwrite defaults here
+@import "../../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../../node_modules/uikit/src/scss/mixins-theme.scss";
+@import "../../node_modules/uikit/src/scss/uikit-theme.scss";
+
+// $primary: #ea3882;
+// $p-dark: #a5275b;
+// $p-light: #fc599d;
+// $secondary: #d7be69;
+// $s-dark: #9b884c;
+// $s-light: #fce69d;
+
+$primary: #1b1b1b;
+$p-dark: #000000;
+$p-light: #7a7a7a;
+$p-sec: #fd6700;
+$p-s-dark: #d65702;
+$p-s-light: #fd9f61;
+
+$secondary: #ffffff;
+$s-dark: #b6b6b6;
+$s-light: #ffffff;
+$danger: #ed1c24;
+$success: #2bda1c;
+$warning: #fc8906;
+$dark: #000000;
+
+* {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+html {
+    background-color: #f1f1f1;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.center {
+    margin: 0 auto;
+    display: block;
+}
+
+.center-text {
+    text-align: center;
+}
+
+.left-text {
+    text-align: left;
+}
+
+.right-text {
+    text-align: right;
+}
+
+.fl-left {
+    float: left;
+}
+
+.fl-right {
+    float: right;
+}
+
+.grey-text {
+    color: #777;
+}
+
+.block {
+    display: block;
+}
+
+.heading {
+    font-size: 16pt;
+    margin-bottom: 7px;
+}
+
+.success {
+    color: $success;
+}
+
+.warning {
+    color: $warning;
+}
+
+.danger {
+    color: $danger;
+}
+
+.main {
+    margin: 15px;
+}
+
+.bg-primary {
+    background-color: $primary;
+}
+
+.bg-secondary {
+    background-color: $secondary;
+}
+
+.bg-p-light {
+    background-color: $p-light;
+}
+
+.bg-s-dark {
+    background-color: $s-dark;
+}
+
+.bg-transparent {
+    opacity: 0;
+}
+
+.primary {
+    color: $primary;
+}
+
+.secondary {
+    color: $secondary;
+}
+
+.p-dark {
+    color: $p-dark;
+}
+
+.p-light {
+    color: $p-light;
+}
+
+.s-dark {
+    color: $s-dark;
+}
+
+.s-light {
+    color: $s-light;
+}
+
+.p-sec {
+    color: $p-sec;
+}
+
+.p-s-dark {
+    color: $p-s-dark;
+}
+
+.p-s-light {
+    color: $p-s-light;
+}
+
+.pointer:hover, .hov:hover {
+    cursor: pointer;
+}
+
+.uk-navbar-container:not(.uk-navbar-transparent){
+    background: $secondary;
+}
+
+:not(.uk-navbar-transparent) .uk-navbar-nav > li > a {
+    color: $primary;
+}
+
+.uk-navbar-nav > li > a:focus  {
+    text-decoration: underline;
+}
+
+.uk-navbar-nav > li > a:hover {
+    text-decoration: underline;
+}
+
+.transparent > .uk-navbar-nav > li > a {
+    color: $primary;
+}
+
+// .transparent > .uk-navbar-nav > li > a:focus {
+//     color: $primary;
+// }
+
+// .transparent > .uk-navbar-nav > li > a:hover {
+//     color: $p-dark;
+// }
+
+.uk-navbar-nav:not(.transparent) > li:hover > a, .uk-navbar-nav > li > a:focus, .uk-navbar-nav > li > a.uk-open {
+    color: $primary;
+}
+
+.transparent > .uk-navbar-nav > li:hover > a, .uk-navbar-nav > li > a.uk-open {
+    color: $primary;
+}
+
+.uk-navbar-nav > li > a:focus {
+    color: $primary;
+}
+
+.transparent > .uk-navbar-nav > li > a:focus {
+    color: $primary;
+}
+
+.transparent .uk-navbar-toggle {
+    color: $primary;
+}
+
+.uk-navbar-toggle {
+    color: $primary;
+}
+
+.uk-navbar-toggle:hover, .uk-navbar-toggle:focus, .uk-navbar-toggle.uk-open {
+    color: $s-dark;
+}
+
+.uk-card-default {
+    background: $secondary;
+    color: $dark;
+}
+
+.uk-card-primary {
+    background: $primary;
+    color: $secondary;
+}
+
+.uk-card-default .uk-card-title {
+    color: $p-sec;
+}
+
+.uk-input, .uk-select, .uk-textarea {
+    color: $p-dark;
+    background: $secondary;
+}
+
+.errDiv {
+    color: $danger;
+    text-align: center;
+}
+
+.affDiv {
+    color: $success;
+    text-align: center;
+}
+
+.uk-button {
+    background-color: $primary;
+    text-transform: capitalize;
+    color: $secondary;
+    border: 1px solid $p-dark;
+    transition: background-color 0.4s, color 0.4s, border-color 0.4s;
+}
+
+.uk-button:hover, .uk-button:focus:hover {
+    color: $s-light;
+    background-color: $p-light;
+    border-color: $p-light;
+}
+
+.uk-button:focus {
+    background-color: $primary;
+    color: $secondary;
+}
+
+.btn-grey:hover, .btn-grey:focus:hover {
+    background-color: $p-light;
+    border-color: $p-light;
+    color: $s-light;
+}
+
+.btn-grey:focus {
+    border-color: $s-dark;
+}
+
+.btn-warn {
+    border-color: $warning;
+}
+
+.btn-warn:hover, .btn-warn:focus:hover {
+    background-color: $warning;
+    color: $secondary;
+}
+
+.btn-warn:focus {
+    border-color: $warning;
+}
+
+.btn-danger {
+    border-color: $danger;
+}
+
+.btn-danger:hover, .btn-danger:focus:hover {
+    background-color: $danger;
+    color: $secondary;
+}
+
+.btn-danger:focus {
+    border-color: $danger;
+}
+
+// .uk-navbar-nav > li > a{
+//     text-transform: capitalize;
+// }
+
+.uk-input:focus, .uk-select:focus, .uk-textarea:focus{
+    outline: none;
+    border-color: $primary;
+}
+
+.uk-tab > .uk-active > a {
+    border-color: $primary;
+}
+
+.uk-tab > * > a {
+    text-transform: capitalize;
+    font-size: 13pt;
+}
+
+@media (min-width: 960px) {
+    .uk-form-horizontal .uk-form-label {
+        text-align: right;
+    }
+}
+
+@media (max-width: 959px) {
+    .uk-form-horizontal .uk-form-label {
+        text-align: center;
+    }
+}
+
+.uk-search-default .uk-search-input {
+    background: $secondary;
+}
+
+.uk-search-default .uk-search-input:focus {
+    background: $secondary;
+    border-color: $primary;
+}
+
+a {
+    color: $p-s-dark;
+}
+
+a:hover {
+    color: $p-s-dark;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.link-a {
+    color: $p-s-dark;
+}
+
+.link-a:hover {
+    color: $p-s-dark;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.bgImg {
+    height: 400px;
+    width: 400px;
+}
+
+@media only screen and (max-width: 640px){
+    .bgImg {
+        height: 400px;
+        width: 400px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 640px){
+    .bgImg {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-height: 326px){
+    .bgImg {
+        height: 400px;
+        width: 400px;
+    }
+}
+
+@media only screen and (max-height: 500px){
+    .bgImg {
+        height: 400px;
+        width: 400px;
+    }
+}
+// not entirely sure what/if this does
+@media (max-width: 640px){
+    .bgImg {
+        .uk-flex-around\@s {
+            justify-content: left;
+        }
+    }
+}
+
+.fill {
+    .uk-icon:not(.uk-preserve) [stroke*="#"]:not(.uk-preserve){
+        stroke: $primary;
+        fill: $primary;
+    }
+}
+
+.s-link .uk-icon:hover {
+    color: $p-dark;
+}
+
+textarea {
+    resize: none;
+    height: 10em;
+}
+
+.btn-space {
+    margin: 30px;
+}
+
+.hidden {
+    display: none;
+}
+
+.in-stock {
+    color: $success;
+    font-size: 13pt;
+}
+
+.out-of-stock {
+    color: $warning;
+    font-size: 13pt;
+}
+
+.uk-radio:checked:focus, .uk-checkbox:checked:focus, .uk-checkbox:indeterminate:focus {
+    background-color: $primary;
+}
+
+.uk-radio:checked, .uk-checkbox:checked, .uk-checkbox:indeterminate {
+    background-color: $primary;
+}
