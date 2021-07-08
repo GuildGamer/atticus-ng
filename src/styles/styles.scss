@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 // $global-link-color: #14da02;
-$global-font-family: 'Cormorant Garamond', serif;
+$global-font-family: "Neue Machina", Arial, Helvetica, sans-serif;
 $global-font-size: 22px;
 //define overwrite defaults here
 @import "../../node_modules/uikit/src/scss/variables-theme.scss";
@@ -29,8 +29,19 @@ $success: #2bda1c;
 $warning: #fc8906;
 $dark: #000000;
 
+@font-face {
+    font-family: "Neue Machina";
+    src: url("/assets/fonts/NeueMachina-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Neue Machina";
+    src: url("/assets/fonts/NeueMachina-Ultrabold.otf") format("opentype");
+    font-weight: bold;
+}
+
 * {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: "Neue Machina", Arial, Helvetica, sans-serif;
 }
 
 html {
