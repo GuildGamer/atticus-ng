@@ -1,0 +1,38 @@
+<div class="about">
+	<div class="center-text center form-div uk-card-default uk-width-1-2@m uk-width-2-3@s">
+		<h3 class="uk-card-title bold">Book a Consultation Session</h3>
+		<form class="uk-form-stacked" action="javascript:void();">
+			<div>
+				<label class="uk-form-label" for="form-stacked-f_name">*Full Name</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-f_name" [(ngModel)]="full_name" name="full_name"
+						type="text" placeholder="Enter your Full Name">
+				</div>
+			</div>
+			<br>
+			<div>
+				<label class="uk-form-label" for="form-stacked-email">*Email Address</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-email" [(ngModel)]="email" name="email" type="email"
+						placeholder="Enter your Email Address">
+				</div>
+			</div>
+			<br>
+			<div>
+				<label class="uk-form-label" for="form-stacked-reason">*Reason for Consultation</label>
+				<div class="uk-form-controls">
+					<div class="uk-margin">
+						<textarea id="form-stacked-reason" class="uk-textarea" rows="5" name="reason"
+							[(ngModel)]="reason"
+							placeholder="Please explain in brief the reason for this consultation"></textarea>
+					</div>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<button (click)="validate()" class="uk-button uk-button-primary">{{opLoading ? "Booking Session..." : "Book
+				Session"}}</button>
+		</form>
+	</div>
+</div>

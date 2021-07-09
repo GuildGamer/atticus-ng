@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'app-home',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class HomeComponent implements OnInit {
 	services: Array<any>;
 	content = "Gad Legal is a business law firm that helps to provide legal structures for businesses and protects their legal interests so that they can run their businesses with ease and peace of mind.";
-	constructor() {
+	
+	constructor(
+		private router: Router
+	) {
 		this.services = [
 			[
 				{
@@ -54,4 +58,7 @@ export class HomeComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
+	book(){
+		this.router.navigate(['/book']);
+	}
 }
