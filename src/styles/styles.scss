@@ -7,19 +7,19 @@ $global-font-size: 22px;
 @import "../../node_modules/uikit/src/scss/mixins-theme.scss";
 @import "../../node_modules/uikit/src/scss/uikit-theme.scss";
 
-// $primary: #ea3882;
-// $p-dark: #a5275b;
-// $p-light: #fc599d;
-// $secondary: #d7be69;
-// $s-dark: #9b884c;
-// $s-light: #fce69d;
+// $primary: #1b1b1b;
+// $p-dark: #000000;
+// $p-light: #7a7a7a;
+// $p-sec: #fd6700;
+// $p-s-dark: #d65702;
+// $p-s-light: #fd9f61;
 
-$primary: #1b1b1b;
+$primary: #111132;
 $p-dark: #000000;
-$p-light: #7a7a7a;
-$p-sec: #fd6700;
-$p-s-dark: #d65702;
-$p-s-light: #fd9f61;
+$p-light: #272775;
+$p-sec: #de143c;
+$p-s-dark: #a30f2d;
+$p-s-light: #df3b5c;
 
 $secondary: #ffffff;
 $s-dark: #b6b6b6;
@@ -168,6 +168,18 @@ html {
 
 .p-s-light {
     color: $p-s-light;
+}
+
+.bg-p-sec {
+    background-color: $p-sec;
+}
+
+.bg-p-s-dark {
+    background-color: $p-s-dark;
+}
+
+.bg-p-s-light {
+    background-color: $p-s-light;
 }
 
 .pointer:hover, .hov:hover {
@@ -456,4 +468,59 @@ textarea {
 
 .uk-radio:checked, .uk-checkbox:checked, .uk-checkbox:indeterminate {
     background-color: $primary;
+}
+
+@media only screen and (max-width: 600px){
+    //smaller mobile devices
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    //small mobile devices
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    //tablets
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    //laptops and larger
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    //laptops and larger
+    .mobile {
+        display: none;
+    }
+
+    .desktop {
+        display: block;
+    }
 }

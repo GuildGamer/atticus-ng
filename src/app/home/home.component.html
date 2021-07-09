@@ -1,29 +1,69 @@
 <div class="home-page">
 	<div id="main-div">
 		<br><br>
-		<h1 class="center-text"><span class="t-bg">I.A. Adejumo & Sons</span></h1>
+		<h1 class="center-text"><span class="t-bg">Best for Businesses</span></h1>
 		<div class="banner-text">
-			Whether you're stocking up your retail business or purchasing for your company,
-			head over to I.A. Adejumo & Sons for best in class products offered at affordable
-			rates.
+			Wait a minute! Does this describe you? You want to start a business and
+			don't know what structure to put in place. You have a business and want to protect
+			without worrying about legal issues and documentation. Maybe there's more you need....
+			Well, good news! You are in the right place.
+		</div>
+		<div class="desktop">
+			<div class="flexbox uk-width-1-2 center">
+				<button class="uk-button uk-button-default">Book a Session</button>
+				<button class="uk-button uk-button-secondary">Buy our e-book</button>
+			</div>
+		</div>
+		<div class="mobile">
+			<div class="flexbox uk-width-1-2 center center-text">
+				<button class="uk-button uk-button-default">Book a Session</button>
+				<br><br>
+				<button class="uk-button uk-button-secondary">Buy our e-book</button>
+			</div>
 		</div>
 		<hr class="placeholder">
 	</div>
-	<div uk-grid>
-		<div class="uk-card uk-card-default uk-card-body uk-width-1-3@m center">
-			<h3 class="uk-card-title center-text">Quality Guaranteed</h3>
-			<p>
-				All of our products come with our highest quality assurance. Your satisfaction is our main priority.
-				<a [routerLink]="['/contact']">Reach out</a> to us today for all your wholesale/distribution needs.
-			</p>
+	<div class="uk-card-title center-text p-sec">Our Services</div>
+	<br>
+	<div class="">
+		<div *ngFor="let sGroup of services" uk-grid>
+			<div *ngFor="let service of sGroup"
+				class="uk-card uk-width-1-3@m uk-width-3-4@xs uk-card-default uk-card-body center">
+				<div class="center-text">
+					<span class="bg-p-sec icon-span">
+						<img src="{{service.icon}}" alt="Image" class="icon">
+					</span>
+				</div>
+				<h4 class="uk-card-title center-text">{{service.title}}</h4>
+				<p class="desktop">{{service.content}}</p>
+				<p class="mobile center-text">{{service.content}}</p>
+			</div>
 		</div>
-		<div class="uk-card uk-card-default uk-card-body uk-width-1-3@m center">
-			<h3 class="uk-card-title center-text">Affordable Pricing</h3>
-			<p>
-				Our high quality assurance doesn't mean we sacrifice affordability. Knowing you
-				values both quality and affordability means we strive to make all our goods available
-				to you at the most affordable rates.
-			</p>
+	</div>
+	<br>
+	<div>
+		<div uk-grid>
+			<div class="uk-card uk-card-default uk-card-body uk-width-5-6 center flexbox">
+				<div class="mobile">
+					<h3 class="uk-card-title center-text">The Attorney</h3>
+					<br>
+				</div>
+				<div>
+					<img src="/assets/founder.jpg" class="f-img" alt="Founder Image">
+				</div>
+				<div class="f-text">
+					<h3 class="desktop uk-card-title center-text">The Attorney</h3>
+					<h5 class="primary bold">Victor Momodu</h5>
+					<p class="primary">
+						"I started out as a lawyer with the vision to help as many
+						people as I can with my knowledge of the law. With this in mind, I
+						have come to find that so many business owners are faced with difficulties
+						in structuring and protecting their businesses.
+						I help business owners by protecting their business and putting structures in
+						place to help them run their business with ease."
+					</p>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>

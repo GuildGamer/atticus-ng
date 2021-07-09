@@ -1,21 +1,129 @@
 #main-div {
-    background-image: url('/assets/home3.jpg');
+    background-image: url('/assets/home1.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     // height: 100vh;
 }
 
 .t-bg {
-    background-color: #e4e4e460;
+    // background-color: #94898960;
+    color: white;
+    font-weight: bold;
 }
 
 .banner-text {
     width: 50%;
     margin: 100px auto;
-    background-color: #fff;
+    background-color: #adadad81;
+    color: #fafafa;
     padding: 20px;
 }
 
 .placeholder {
     opacity: 0;
+}
+
+.img-1 {
+    width: 90%;
+}
+
+.flexbox {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    width: 95%;
+    display: block;
+    margin: 0 auto;
+}
+
+.icon-span {
+    border-radius: 50%;
+    padding: 20px;
+    display: inline-block;
+    width: 10%;
+}
+
+.f-img {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+
+.f-text {
+    margin-left: 10px;
+    width: 100%;
+}
+
+.uk-button-secondary {
+    background-color: transparent;
+    border: 3px solid white;
+    transition: background-color 0.5s;
+    // transition: color 0.5s;
+}
+
+.uk-button-secondary:hover {
+    background-color: white;
+    color: black;
+}
+
+.uk-button-secondary:focus {
+    border: 3px solid white;
+}
+
+@media only screen and (max-width: 600px){
+    //smaller mobile devices
+    .flexbox {
+        display: block;
+    }
+
+    .banner-text {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 600px){
+    //small mobile devices
+    .flexbox {
+        display: block;
+    }
+
+    .banner-text {
+        width: 90%;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    //tablets
+    .flexbox {
+        display: block;
+    }
+
+    .banner-text {
+        width: 70%;
+    }
+}
+
+@media only screen and (min-width: 992px){
+    //laptops and larger
+    .flexbox {
+        display: flex;
+    }
+
+    .banner-text {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    //laptops and larger
+    .flexbox {
+        display: flex;
+    }
+
+    .banner-text {
+        width: 50%;
+    }
 }
