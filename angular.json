@@ -91,7 +91,7 @@
           "configurations": {
             "production": {
               "browserTarget": "mortar-ng:build:production",
-              "proxyConfig": "src/proxy-prod.conf.json"
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "browserTarget": "mortar-ng:build:development"
