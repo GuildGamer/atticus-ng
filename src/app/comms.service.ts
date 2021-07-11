@@ -17,4 +17,21 @@ export class CommsService {
 			password: password
 		});
 	}
+
+	pay(
+		tx_ref: string,
+		amount: number,
+		redirect_url: string,
+		customer: any,
+		customizations: any
+	): Observable<any> {
+		return this.request.payment({
+			tx_ref: tx_ref,
+			amount: amount,
+			payment_options: "card",
+			redirect_url: redirect_url,
+			customer: customer,
+			customizations: customizations
+		});
+	}
 }

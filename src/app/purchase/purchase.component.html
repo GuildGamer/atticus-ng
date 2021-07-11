@@ -1,0 +1,42 @@
+<div class="about">
+	<div class="center-text center form-div uk-card-default uk-width-1-2@m uk-width-2-3@s">
+		<h3 class="uk-card-title bold">Purchase our e-book</h3>
+		<div class="flexbox">
+			<div class="flex-item">
+				<div class="center-text">
+					<img src="/assets/book.png" alt="Image" class="img">
+				</div>
+			</div>
+			<div class="flex-item">
+				<div class="left-text">
+					<div class="primary h-text">The Art of Thinking</div>
+					<div class="p-sec italic">Victor Momodu</div>
+					<br>
+					<div class="italic">N1,600.00</div>
+				</div>
+			</div>
+		</div>
+		<form class="uk-form-stacked" action="javascript:void();">
+			<div>
+				<label class="uk-form-label" for="form-stacked-f_name">*Full Name</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-f_name" [(ngModel)]="full_name" name="full_name"
+						type="text" placeholder="Enter your Full Name">
+				</div>
+			</div>
+			<br>
+			<div>
+				<label class="uk-form-label" for="form-stacked-email">*Email Address</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-email" [(ngModel)]="email" name="email" type="email"
+						placeholder="Enter your Email Address">
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<button (click)="validate()" class="uk-button uk-button-primary">{{opLoading ? "Please wait..." : "Pay
+				Now"}}</button>
+		</form>
+	</div>
+</div>

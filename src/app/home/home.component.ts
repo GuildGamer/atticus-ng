@@ -58,7 +58,11 @@ export class HomeComponent implements OnInit {
 	ngOnInit(): void {
 	}
 
-	book(){
-		this.router.navigate(['/book']);
+	consultation(){
+		this.router.navigate(['/consultation']);
+	}
+
+	purchase(){
+		this.router.navigate(['/purchase']);
 	}
 }

@@ -14,6 +14,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BookingComponent } from './booking/booking.component';
+import { PurchaseComponent } from './purchase/purchase.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +27,14 @@ import { BookingComponent } from './booking/booking.component';
     NotFoundComponent,
     FooterComponent,
     NavbarComponent,
-    BookingComponent
+    BookingComponent,
+    PurchaseComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
