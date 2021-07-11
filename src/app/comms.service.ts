@@ -31,7 +31,15 @@ export class CommsService {
 			payment_options: "card",
 			redirect_url: redirect_url,
 			customer: customer,
+			currency: "NGN",
 			customizations: customizations
+		});
+	}
+
+	validatePayment(tx_ref: string, trans_id: string): Observable<any> {
+		return this.request.request('validate-transaction', 'post', {
+			tx_ref: tx_ref,
+			trans_id: trans_id
 		});
 	}
 }

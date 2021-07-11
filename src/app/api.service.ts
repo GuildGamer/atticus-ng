@@ -26,6 +26,6 @@ export class ApiService {
 	}
 
 	payment(body: any): Observable<any> {
-		return this.http.post(`https://api.flutterwave.com/v3/payments`, body, { headers: { Authorization: `Bearer ${this.address.SECURE_KEY}` } });
+		return this.http.post(`${this.address.SITE_ADDRESS}/api`, body, { headers: { Authorization: `Bearer ${this.address.SECURE_KEY}` } });
 	}
 }

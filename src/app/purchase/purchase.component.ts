@@ -39,13 +39,18 @@ export class PurchaseComponent implements OnInit {
 			}
 
 			this.opLoading = true;
-			this.comms.pay(txRef, this.price, "", cDets, custom).subscribe((data)=>{
+			this.comms.pay(txRef, this.price, "https://silly-blackwell-cd708a.netlify.app/purchased", cDets, custom).subscribe((data)=>{
 				this.opLoading = false;
-				console.log(data);
-			}, (e)=>{
+				this.app.alert("You will be redirected to complete your payment", false);
+				if(data.status == 'success'){
+					window.open(data.data.link, "_blank");
+				}
+				else {
+					this.app.alert("An error occured. Please try again later. If this persists, contact Support", true);
+				}
+			}, ()=>{
 				this.opLoading = false;
 				this.app.alert("Unable to reach Payment Provider. Please try again later", true);
-				console.log(e);
 			});
 		}
 	}

@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BookingComponent } from './booking/booking.component';
 import { PurchaseComponent } from './purchase/purchase.component';
+import { PurchasedComponent } from './purchased/purchased.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PurchaseComponent } from './purchase/purchase.component';
     FooterComponent,
     NavbarComponent,
     BookingComponent,
-    PurchaseComponent
+    PurchaseComponent,
+    PurchasedComponent
   ],
   imports: [
     BrowserModule,

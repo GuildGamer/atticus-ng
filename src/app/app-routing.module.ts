@@ -6,6 +6,7 @@ import { ContactComponent } from './contact/contact.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { PurchaseComponent } from './purchase/purchase.component';
+import { PurchasedComponent } from './purchased/purchased.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent },
   { path: 'consultation', component: BookingComponent },
   { path: 'purchase', component: PurchaseComponent },
+  { path: 'purchased', component: PurchasedComponent },
   { path: '**', component: NotFoundComponent },
 ];
 
