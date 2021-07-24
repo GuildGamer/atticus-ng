@@ -82,6 +82,15 @@
     .banner-text {
         width: 90%;
     }
+
+    .uk-card {
+        margin-left: 50px;
+        margin-right: 20px;
+    }
+
+    .cw {
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (min-width: 600px){
@@ -92,6 +101,14 @@
 
     .banner-text {
         width: 90%;
+    }
+
+    .uk-card {
+        margin: 0 auto;
+    }
+
+    .cw {
+        margin: 0 auto;
     }
 }
 
@@ -104,6 +121,10 @@
     .banner-text {
         width: 70%;
     }
+
+    .uk-card {
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (min-width: 992px){
@@ -115,6 +136,10 @@
     .banner-text {
         width: 50%;
     }
+
+    .uk-card {
+        margin: 0 auto;
+    }
 }
 
 @media only screen and (min-width: 1200px){
@@ -125,5 +150,9 @@
 
     .banner-text {
         width: 50%;
+    }
+
+    .uk-card {
+        margin: 0 auto;
     }
 }

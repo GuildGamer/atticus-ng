@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { AppComponent } from '../app.component';
 import { CommsService } from '../comms.service';
 
@@ -13,7 +13,6 @@ export class PurchasedComponent implements OnInit {
 	verified: boolean = false;
 
 	constructor(
-		private route: ActivatedRoute,
 		private router: Router,
 		private app: AppComponent,
 		private comms: CommsService

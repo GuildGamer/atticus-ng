@@ -16,6 +16,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { BookingComponent } from './booking/booking.component';
 import { PurchaseComponent } from './purchase/purchase.component';
 import { PurchasedComponent } from './purchased/purchased.component';
+import { BlogComponent } from './blog/blog.component';
+import { SignupComponent } from './signup/signup.component';
+import { LoginComponent } from './login/login.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,11 @@ import { PurchasedComponent } from './purchased/purchased.component';
     NavbarComponent,
     BookingComponent,
     PurchaseComponent,
-    PurchasedComponent
+    PurchasedComponent,
+    BlogComponent,
+    SignupComponent,
+    LoginComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

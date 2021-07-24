@@ -9,7 +9,8 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 	services: Array<any>;
 	content = "Gad Legal is a business law firm that helps to provide legal structures for businesses and protects their legal interests so that they can run their businesses with ease and peace of mind.";
-	
+	lText: string = "I started out as a lawyer with the vision to help as many people as I can with my knowledge of the law. With this in mind, I have come to find that so many business owners are faced with difficulties in structuring and protecting their businesses. I help business owners by protecting their business and putting structures in place to help them run their business with ease.";
+
 	constructor(
 		private router: Router
 	) {

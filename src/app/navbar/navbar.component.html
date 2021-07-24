@@ -26,7 +26,17 @@
 		<div class="uk-navbar-left">
 			<a class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle="target: #offcanvas-nav"></a>
 		</div>
-		<div class="uk-navbar-center">
+		<div class="uk-hidden@s uk-navbar-right">
+			<div>
+				<ul class="uk-navbar-nav">
+					<li>
+						<a [routerLink]="['/']"><img class="logo" src="/assets/logo.png"
+								alt="GLC Logo"></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="uk-visible@s uk-navbar-center">
 			<div>
 				<ul class="uk-navbar-nav">
 					<li>
@@ -41,7 +51,7 @@
 <div id="offcanvas-nav" uk-offcanvas="overlay: true">
     <div class="uk-offcanvas-bar">
         <ul class="uk-nav">
-            <li class="center-text"><a [routerLink]="['']">Gad Legal Consult</a></li>
+            <li class="center-text"><a [routerLink]="['/']">Gad Legal Consult</a></li>
             <br>
         </ul>
         <br>

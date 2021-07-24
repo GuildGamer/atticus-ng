@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AddressService } from '../address.service';
 import { AppComponent } from '../app.component';
 import { CommsService } from '../comms.service';
 
@@ -16,7 +17,8 @@ export class PurchaseComponent implements OnInit {
 
 	constructor(
 		private comms: CommsService,
-		private app: AppComponent
+		private app: AppComponent,
+		private address: AddressService
 	) { }
 
 	ngOnInit(): void {
@@ -39,7 +41,7 @@ export class PurchaseComponent implements OnInit {
 			}
 
 			this.opLoading = true;
-			this.comms.pay(txRef, this.price, "https://silly-blackwell-cd708a.netlify.app/purchased", cDets, custom).subscribe((data)=>{
+			this.comms.pay(txRef, this.price, `${this.address.SITE_ADDRESS}/purchased`, cDets, custom).subscribe((data)=>{
 				this.opLoading = false;
 				this.app.alert("You will be redirected to complete your payment", false);
 				if(data.status == 'success'){
