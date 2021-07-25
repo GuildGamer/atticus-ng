@@ -1,0 +1,26 @@
+<div class="create-post">
+	<app-loading *ngIf="loading"></app-loading>
+	<div *ngIf="loggedIn" class="center-text center form-div uk-card-default uk-width-1-2@m uk-width-2-3@s">
+		<h3 class="uk-card-title bold">Create Blog Post</h3>
+		<form class="uk-form-stacked" action="javascript:void();">
+			<div>
+				<label class="uk-form-label" for="form-stacked-title">*Title</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-title" [(ngModel)]="heading" name="heading" type="text" placeholder="Post Title">
+				</div>
+			</div>
+			<div class="uk-form-controls">
+				<label class="uk-form-label" for="form-stacked-textarea">*Content</label>
+				<div class="uk-margin">
+					<textarea id="form-stacked-textarea" class="uk-textarea" name="post"
+						[(ngModel)]="post" placeholder="Type Post Content"></textarea>
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<button *ngIf="!createLoading" (click)="validate()" class="uk-button uk-button-primary">Publish Post</button>
+			<app-loading *ngIf="createLoading"></app-loading>
+		</form>
+	</div>
+</div>

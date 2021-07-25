@@ -1,1 +1,25 @@
-<p>login works!</p>
+<div class="login">
+	<div class="center-text center form-div uk-card-default uk-width-1-2@m uk-width-2-3@s">
+		<h3 class="uk-card-title bold">Sign In to your Account</h3>
+		<form class="uk-form-stacked" action="javascript:void();">
+			<div>
+				<label class="uk-form-label" for="form-stacked-email">*Email Address</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-email" [(ngModel)]="email" name="email" type="email" placeholder="Enter your Email Address">
+				</div>
+			</div>
+			<br>
+			<div>
+				<label class="uk-form-label" for="form-stacked-pass">*Password</label>
+				<div class="uk-form-controls">
+					<input class="uk-input" id="form-stacked-pass" [(ngModel)]="password" name="password" type="password" placeholder="Enter your Password">
+				</div>
+			</div>
+			<br>
+			<br>
+			<br>
+			<button *ngIf="!loading" (click)="validate()" class="uk-button uk-button-primary">Sign In</button>
+			<app-loading *ngIf="loading"></app-loading>
+		</form>
+	</div>
+</div>

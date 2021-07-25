@@ -1,0 +1,47 @@
+<div class="post">
+	<app-loading *ngIf="loading"></app-loading>
+	<div *ngIf="post" class="uk-card uk-card-default uk-card-body uk-width-2-3@m center">
+		<h3 class="uk-card-title center-text">{{post.heading}}</h3>
+		<div class="flexbox">
+			<div>{{post.like_count}} Like{{post.like_count == 1 ? '' : 's'}}</div>
+			<div class="italic">{{post.date_created}}</div>
+		</div>
+		<div>
+			{{post.content}}
+		</div>
+		<br>
+		<div *ngIf="loggedIn" class="right-text">
+			<a *ngIf="!liked" (click)="like()" class="uk-icon-button" uk-icon="star"></a>
+			<span *ngIf="liked">
+				<img src="/favicon.ico" alt="Like">
+			</span>
+		</div>
+		<br><br>
+		<div>
+			<h4 class="center-text">Comments</h4>
+			<div class="comm-div" *ngIf="loggedIn">
+				<div class="uk-form-controls">
+					<div class="uk-margin">
+						<textarea id="form-stacked-textarea" class="uk-textarea" rows="5" name="comm_text"
+							[(ngModel)]="comm_text" placeholder="Type your Comment"></textarea>
+					</div>
+				</div>
+				<br>
+				<div class="right-text">
+					<button *ngIf="!commLoading" (click)="comment()" class="uk-button uk-button-primary">Post
+						Comment</button>
+					<app-loading *ngIf="commLoading"></app-loading>
+				</div>
+			</div>
+			<div *ngIf="!loggedIn">
+				<h5><a [routerLink]="['/login']">Log In</a> or <a [routerLink]="['/signup']">Create an Account</a> to post a Comment</h5>
+			</div>
+			<div *ngIf="comments.length != 0">
+				<app-comment *ngFor="let comment of comments" [comment]="comment" [username]="username" [isAdmin]="isAdmin"></app-comment>
+			</div>
+			<div *ngIf="comments.length != 0">
+				<h5 class="center-text italic">No Comments</h5>
+			</div>
+		</div>
+	</div>
+</div>

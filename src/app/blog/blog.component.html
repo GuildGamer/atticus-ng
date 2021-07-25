@@ -1,1 +1,19 @@
-<p>blog works!</p>
+<div class="blog">
+	<div class="uk-card uk-card-default uk-card-body uk-width-2-3@m center">
+		<h2 class="uk-card-title center-text">GLC Blog</h2>
+		<div>
+			<app-loading *ngIf="loading"></app-loading>
+			<ul *ngIf="!loading">
+				<li class="blog-link" *ngFor="let post of posts">
+					<a [routerLink]="['/blog-post', post.post_id]">{{post.heading}} | {{post.date_created}}</a>
+					<span *ngIf="isAdmin">
+						<a (click)="edit(post.post_id)" class="uk-icon-button" uk-icon="pencil"></a>
+					</span>
+					<span *ngIf="isAdmin">
+						<a (click)="delete(post.post_id)" class="uk-icon-button" uk-icon="trash"></a>
+					</span>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>

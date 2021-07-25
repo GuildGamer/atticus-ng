@@ -20,6 +20,11 @@ import { BlogComponent } from './blog/blog.component';
 import { SignupComponent } from './signup/signup.component';
 import { LoginComponent } from './login/login.component';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { LoadingComponent } from './loading/loading.component';
+import { PostComponent } from './post/post.component';
+import { CreateBlogPostComponent } from './create-blog-post/create-blog-post.component';
+import { EditBlogPostComponent } from './edit-blog-post/edit-blog-post.component';
+import { CommentComponent } from './comment/comment.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +43,12 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
     BlogComponent,
     SignupComponent,
     LoginComponent,
-    AdminLoginComponent
+    AdminLoginComponent,
+    LoadingComponent,
+    PostComponent,
+    CreateBlogPostComponent,
+    EditBlogPostComponent,
+    CommentComponent
   ],
   imports: [
     BrowserModule,

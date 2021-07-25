@@ -1,0 +1,18 @@
+<div class="comment uk-card-default uk-card">
+	<div class="uk-card-body">
+		<div class="primary">
+			{{comment.username}}
+		</div>
+		<br>
+		{{comment.content}}
+		<br>
+		<div class="right-text italic">
+			{{comment.date_created}}
+		</div>
+		<br>
+		<div class="right-text">
+			<a *ngIf="canDelete" (click)="delete()" class="uk-icon-button" uk-icon="trash"></a>
+			<a *ngIf="isAdmin" (click)="remove()" class="uk-icon-button" uk-icon="trash"></a>
+		</div>
+	</div>
+</div>

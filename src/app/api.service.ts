@@ -16,12 +16,44 @@ export class ApiService {
 		this.api = this.address.SERVER_ADDRESS;
 	}
 
-	request(path: string, method: string, body?: any): Observable<any> {
-		if (method === 'post') {
-			return this.http.post(`${this.api}/${path}`, body);
+	request(path: string, method: string, admin: boolean, body?: any): Observable<any> {
+		if (!admin) {
+			let token = localStorage.getItem('token');
+			if (token) {
+				if (method === 'post') {
+					return this.http.post(`${this.api}/${path}`, body, { headers: { Authorization: `Bearer ${token}` } });
+				}
+				else {
+					return this.http.get(`${this.api}/${path}`, { headers: { Authorization: `Bearer ${token}` } });
+				}
+			}
+			else {
+				if (method === 'post') {
+					return this.http.post(`${this.api}/${path}`, body);
+				}
+				else {
+					return this.http.get(`${this.api}/${path}`);
+				}
+			}
 		}
 		else {
-			return this.http.get(`${this.api}/${path}`);
+			let a_token = localStorage.getItem('access_token');
+			if (a_token) {
+				if (method === 'post') {
+					return this.http.post(`${this.api}/admin/${path}`, body, { headers: { Authorization: `Bearer ${a_token}` } });
+				}
+				else {
+					return this.http.get(`${this.api}/admin/${path}`, { headers: { Authorization: `Bearer ${a_token}` } });
+				}
+			}
+			else {
+				if (method === 'post') {
+					return this.http.post(`${this.api}/admin/${path}`, body);
+				}
+				else {
+					return this.http.get(`${this.api}/admin/${path}`);
+				}
+			}
 		}
 	}
 
