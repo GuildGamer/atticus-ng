@@ -48,7 +48,7 @@ export class CommsService {
 	}
 
 	loadPost(post_id: string): Observable<any> {
-		return this.request.request('blog-post', 'post', false, { post_id: post_id });
+		return this.request.request(`blog-post/${post_id}`, 'get', false);
 	}
 
 	signup(username: string, email: string, password: string): Observable<any> {
@@ -68,11 +68,11 @@ export class CommsService {
 	}
 
 	deleteBlogPost(post_id: string): Observable<any> {
-		return this.request.request('delete-blog-post', 'post', true, { post_id: post_id });
+		return this.request.request(`delete-blog-post/${post_id}`, 'get', true);
 	}
 
 	editBlogPost(post_id: string): Observable<any> {
-		return this.request.request('edit-blog-post', 'post', true, { post_id: post_id });
+		return this.request.request(`edit-blog-post/${post_id}`, 'get', true);
 	}
 
 	updateBlogPost(post_id: string, title: string, content: string): Observable<any> {
@@ -87,11 +87,13 @@ export class CommsService {
 		return this.request.request('comment-on-blog-post', 'post', false, { post_id: post_id, comment: comment });
 	}
 
+	//when the comment poster wants to delete their comment
 	deleteComment(comment_id: string): Observable<any> {
-		return this.request.request('delete-comment', 'post', false, { comment_id: comment_id });
+		return this.request.request(`delete-comment/${comment_id}`, 'get', false);
 	}
 
+	//when the site admin wants to remove a comment
 	removeComment(comment_id: string): Observable<any> {
-		return this.request.request('remove-comment', 'post', true, { comment_id: comment_id });
+		return this.request.request(`remove-comment/${comment_id}`, 'get', true);
 	}
 }
