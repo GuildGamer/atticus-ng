@@ -15,7 +15,7 @@ interface LoginAPIData {
 	styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
-	email: string = '';
+	username: string = '';
 	password: string = '';
 
 	loading: boolean = false;
@@ -31,12 +31,12 @@ export class LoginComponent implements OnInit {
 
 	validate() {
 		let wsp = /^\s*$/;
-		if (wsp.test(this.email) || wsp.test(this.password)) {
-			this.app.alert("Please provide both your email address and a password", true);
+		if (wsp.test(this.username) || wsp.test(this.password)) {
+			this.app.alert("Please provide both your username and password", true);
 		}
 		else {
 			this.loading = true;
-			this.comms.login(this.email, this.password).subscribe((data: LoginAPIData) => {
+			this.comms.login(this.username, this.password).subscribe((data: LoginAPIData) => {
 				this.loading = false;
 				if (data.success) {
 					this.app.alert("Login Successful!", false);

@@ -11,9 +11,9 @@ export class CommsService {
 		private request: ApiService
 	) { }
 
-	login(email: string, password: string): Observable<any> {
+	login(username: string, password: string): Observable<any> {
 		return this.request.request('signin', 'post', false, {
-			email: email,
+			username: username,
 			password: password
 		});
 	}
