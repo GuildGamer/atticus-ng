@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { AddressService } from '../address.service';
 import { AppComponent } from '../app.component';
 import { CommsService } from '../comms.service';
 
@@ -25,7 +26,8 @@ export class SignupComponent implements OnInit {
 	constructor(
 		private app: AppComponent,
 		private comms: CommsService,
-		private router: Router
+		private router: Router,
+		private address: AddressService
 	) { }
 
 	ngOnInit(): void {
@@ -36,7 +38,7 @@ export class SignupComponent implements OnInit {
 		if (wsp.test(this.username) || wsp.test(this.email) || wsp.test(this.password) || wsp.test(this.cPass)) {
 			this.app.alert("All fields are required", true);
 		}
-		else if(this.password !== this.cPass){
+		else if (this.password !== this.cPass) {
 			this.app.alert("Your Password and Confirmation do not match", true);
 		}
 		else {
@@ -46,8 +48,9 @@ export class SignupComponent implements OnInit {
 				if (data.success) {
 					this.app.alert("Signup Successful!", false);
 					localStorage.setItem('token', data.token);
+					localStorage.setItem('l_in', 'true');
 					setTimeout(() => {
-						this.router.navigate(['/']);
+						location.assign(this.address.SITE_ADDRESS);
 					}, 2000);
 				}
 				else {

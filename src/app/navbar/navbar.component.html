@@ -4,8 +4,9 @@
 			<div class="uk-navbar-center-left">
 				<div>
 					<ul class="uk-navbar-nav">
-						<li><a [routerLink]="['/login']">Login</a></li>
-						<li><a [routerLink]="['/signup']">Signup</a></li>
+						<li *ngIf="!loggedIn"><a [routerLink]="['/login']">Login</a></li>
+						<li *ngIf="!loggedIn"><a [routerLink]="['/signup']">Signup</a></li>
+						<li *ngIf="loggedIn"><a (click)="logout();" title="Log Out">Log Out</a></li>
 					</ul>
 				</div>
 			</div>
@@ -60,8 +61,9 @@
 			<li><a [routerLink]="['/blog']">Blog</a></li>
 			<li><a [routerLink]="['/about']" title="About">About</a></li>
 			<li><a [routerLink]="['/contact']" title="Contact">Contact</a></li>
-			<li><a [routerLink]="['/login']" title="Contact">Login</a></li>
-			<li><a [routerLink]="['/signup']" title="Contact">Signup</a></li>
+			<li *ngIf="!loggedIn"><a [routerLink]="['/login']" title="Login">Login</a></li>
+			<li *ngIf="!loggedIn"><a [routerLink]="['/signup']" title="Signup">Signup</a></li>
+			<li *ngIf="loggedIn"><a (click)="logout();" title="Log Out">Log Out</a></li>
 		</ul>
 	</div>
 </div>
