@@ -7,7 +7,7 @@ import { CommsService } from '../comms.service';
 interface LoginAPIData {
 	success: boolean;//if the request completed successfully
 	reason: string;//only provided if the request failed
-	token: string;//JWT
+	u_id: string;//User ID
 }
 
 @Component({
@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 				this.loading = false;
 				if (data.success) {
 					this.app.alert("Login Successful!", false);
-					localStorage.setItem('token', data.token);
+					localStorage.setItem('token', data.u_id);
 					localStorage.setItem('l_in', 'true');
 					setTimeout(() => {
 						location.assign(this.address.SITE_ADDRESS);

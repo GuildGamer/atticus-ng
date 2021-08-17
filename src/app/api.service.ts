@@ -20,12 +20,16 @@ export class ApiService {
 		if (!admin) {
 			let token = localStorage.getItem('token');
 			if (token) {
-				if (method === 'post') {
-					return this.http.post(`${this.api}/${path}`, body, { headers: { Authorization: `Bearer ${token}` } });
+				// if (method === 'post') {
+				// 	return this.http.post(`${this.api}/${path}`, body, { headers: { Authorization: `Bearer ${token}` } });
+				// }
+				// else {
+				// 	return this.http.get(`${this.api}/${path}`, { headers: { Authorization: `Bearer ${token}` } });
+				// }
+				if(body){
+					body.u_id = token;
 				}
-				else {
-					return this.http.get(`${this.api}/${path}`, { headers: { Authorization: `Bearer ${token}` } });
-				}
+				return this.http.post(`${this.api}/${path}`, body);
 			}
 			else {
 				if (method === 'post') {
