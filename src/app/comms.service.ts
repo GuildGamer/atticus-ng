@@ -12,7 +12,7 @@ export class CommsService {
 	) { }
 
 	login(username: string, password: string): Observable<any> {
-		return this.request.request('signin', 'post', false, {
+		return this.request.request('signin/', 'post', false, {
 			username: username,
 			password: password
 		});
@@ -52,7 +52,7 @@ export class CommsService {
 	}
 
 	loadBlog(): Observable<any> {
-		return this.request.request('blog', 'get', false);
+		return this.request.request('blog/', 'get', false);
 	}
 
 	loadPost(post_id: string): Observable<any> {
@@ -60,7 +60,7 @@ export class CommsService {
 	}
 
 	signup(username: string, email: string, password: string): Observable<any> {
-		return this.request.request('signup', 'post', false, { username: username, email: email, password: password });
+		return this.request.request('signup/', 'post', false, { username: username, email: email, password: password });
 	}
 
 	adminLogin(username: string, password: string): Observable<any> {
@@ -72,7 +72,7 @@ export class CommsService {
 	}
 
 	createBlogPost(title: string, content: string): Observable<any> {
-		return this.request.request('create-blog-post', 'post', true, { title: title, content: content });
+		return this.request.request('create-blog-post/', 'post', true, { title: title, content: content });
 	}
 
 	deleteBlogPost(post_id: string): Observable<any> {

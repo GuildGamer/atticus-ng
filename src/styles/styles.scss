@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 // $global-link-color: #14da02;
 $global-font-family: "Neue Machina", Arial, Helvetica, sans-serif;
-$global-font-size: 22px;
+$global-font-size: 15px;
 //define overwrite defaults here
 @import "../../node_modules/uikit/src/scss/variables-theme.scss";
 @import "../../node_modules/uikit/src/scss/mixins-theme.scss";
@@ -245,6 +245,7 @@ html {
 .uk-card-default {
     background: $secondary;
     color: $dark;
+    border-radius: 20px;
 }
 
 .uk-card-primary {
