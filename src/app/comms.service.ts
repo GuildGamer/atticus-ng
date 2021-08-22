@@ -44,7 +44,7 @@ export class CommsService {
 	}
 
 	book(full_name: string, email: string, reason: string): Observable<any> {
-		return this.request.request('book-consultation', 'post', false, {
+		return this.request.request('book-consultation/', 'post', false, {
 			full_name: full_name,
 			email: email,
 			reason: reason
