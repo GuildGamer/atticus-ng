@@ -50,7 +50,8 @@ export class PurchaseComponent implements OnInit {
 				else {
 					this.app.alert("An error occured. Please try again later. If this persists, contact Support", true);
 				}
-			}, ()=>{
+			}, (e)=>{
+				console.log(e)
 				this.opLoading = false;
 				this.app.alert("Unable to reach Payment Provider. Please try again later", true);
 			});

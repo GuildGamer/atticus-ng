@@ -10,6 +10,7 @@ export class AddressService {
 	SITE_ADDRESS: string = 'https://glc.ng/';
 	//SITE_ADDRESS: string = 'http://127.0.0.1:4200'
 	SECURE_KEY: string = "FLWSECK-1ed9302820737f0454aea8aa138abe95-X";
+	//SECURE_KEY: string = "FLWSECK_TEST-40fb9b28366dee0d081df359d333cce2-X";
 
 	constructor() {
 	}

@@ -24,14 +24,14 @@ export class PurchasedComponent implements OnInit {
 			let tx_ref = parsedRoute.queryParamMap.get('tx_ref');
 			let trans_id = parsedRoute.queryParamMap.get('transaction_id');
 
-			this.app.alert(`Transaction Ref: ${tx_ref}\nTransaction ID: ${trans_id}`, false);
+			//this.app.alert(`Transaction Ref: ${tx_ref}\nTransaction ID: ${trans_id}`, false);
 			this.verified = true;
-			// if(tx_ref && trans_id){
-			// 	this.validate(tx_ref, trans_id);
-			// }
-			// else {
-			// 	this.app.alert("Malformed response. Please contact Support to validate your payment", true);
-			// }
+			 if(tx_ref && trans_id){
+			 	this.validate(tx_ref, trans_id);
+			}
+			else {
+			this.app.alert("Malformed response. Please contact Support to validate your payment", true);
+			}
 		}
 	}
 

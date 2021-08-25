@@ -37,7 +37,7 @@ export class CommsService {
 	}
 
 	validatePayment(tx_ref: string, trans_id: string): Observable<any> {
-		return this.request.request('validate-transaction', 'post', false, {
+		return this.request.request('validate-transaction/', 'post', false, {
 			tx_ref: tx_ref,
 			trans_id: trans_id
 		});
