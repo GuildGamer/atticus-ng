@@ -11,7 +11,7 @@ import { CommsService } from '../comms.service';
 export class PurchaseComponent implements OnInit {
 	full_name: string = "";
 	email: string = "";
-	price: number = 1600;
+	price: number = 2000;
 
 	opLoading: boolean = false;
 
