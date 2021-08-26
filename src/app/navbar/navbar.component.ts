@@ -26,4 +26,9 @@ export class NavbarComponent implements OnInit {
 		localStorage.setItem('l_in', 'false');
 		location.assign(this.address.SITE_ADDRESS);
 	}
+
+	clicked() {
+		document.getElementById('closer')?.click();
+		document.getElementById('closer')?.blur();
+	}
 }
