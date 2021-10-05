@@ -32,7 +32,7 @@ export class ApiService {
 				else {
 					body = { u_id: token }
 				}
-				return this.http.post(`${this.api}/${path}/`, body);
+				return this.http.post(`${this.api}/${path}`, body);
 			}
 			else {
 				if (method === 'post') {

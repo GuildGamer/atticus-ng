@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { AddressService } from '../address.service';
 import { AppComponent } from '../app.component';
 import { CommsService } from '../comms.service';
 
@@ -17,7 +17,7 @@ export class AdminLoginComponent implements OnInit {
 	constructor(
 		private app: AppComponent,
 		private comms: CommsService,
-		private router: Router
+		private address: AddressService
 	) { }
 
 	ngOnInit(): void {
@@ -35,8 +35,9 @@ export class AdminLoginComponent implements OnInit {
 				if (data.success) {
 					this.app.alert("Login Successful!", false);
 					localStorage.setItem('access_token', data.token);
+					localStorage.setItem('a_l_in', 'true');
 					setTimeout(() => {
-						this.router.navigate(['/create-blog-post']);
+						location.assign(this.address.SITE_ADDRESS);
 					}, 2000);
 				}
 				else {

@@ -8,6 +8,7 @@ import { AddressService } from '../address.service';
 })
 export class NavbarComponent implements OnInit {
 	loggedIn: boolean = false;
+	adminLoggedIn: boolean = false;
 
 	constructor(
 		private address: AddressService
@@ -15,6 +16,10 @@ export class NavbarComponent implements OnInit {
 		let lString = localStorage.getItem('l_in') ?? 'false';
 		if (lString == 'true') {
 			this.loggedIn = true;
+		}
+		let a_l = localStorage.getItem('a_l_in') ?? 'false';
+		if(a_l == 'true'){
+			this.adminLoggedIn = true;
 		}
 	}
 
