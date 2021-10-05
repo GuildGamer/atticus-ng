@@ -26,10 +26,13 @@ export class ApiService {
 				// else {
 				// 	return this.http.get(`${this.api}/${path}`, { headers: { Authorization: `Bearer ${token}` } });
 				// }
-				if(body){
+				if (body) {
 					body.u_id = token;
 				}
-				return this.http.post(`${this.api}/${path}`, body);
+				else {
+					body = { u_id: token }
+				}
+				return this.http.post(`${this.api}/${path}/`, body);
 			}
 			else {
 				if (method === 'post') {
@@ -43,12 +46,19 @@ export class ApiService {
 		else {
 			let a_token = localStorage.getItem('access_token');
 			if (a_token) {
-				if (method === 'post') {
-					return this.http.post(`${this.api}/admin/${path}`, body, { headers: { Authorization: `Bearer ${a_token}` } });
+				// if (method === 'post') {
+				// 	return this.http.post(`${this.api}/admin/${path}`, body, { headers: { Authorization: `Bearer ${a_token}` } });
+				// }
+				// else {
+				// 	return this.http.get(`${this.api}/admin/${path}`, { headers: { Authorization: `Bearer ${a_token}` } });
+				// }
+				if (body) {
+					body.a_id = a_token;
 				}
 				else {
-					return this.http.get(`${this.api}/admin/${path}`, { headers: { Authorization: `Bearer ${a_token}` } });
+					body = { a_id: a_token }
 				}
+				return this.http.post(`${this.api}/admin/${path}`, body);
 			}
 			else {
 				if (method === 'post') {
