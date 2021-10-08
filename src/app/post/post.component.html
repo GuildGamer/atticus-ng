@@ -39,7 +39,7 @@
 			<div *ngIf="comments.length != 0">
 				<app-comment *ngFor="let comment of comments" [comment]="comment" [username]="username" [isAdmin]="isAdmin"></app-comment>
 			</div>
-			<div *ngIf="comments.length != 0">
+			<div *ngIf="comments.length == 0">
 				<h5 class="center-text italic">No Comments</h5>
 			</div>
 		</div>

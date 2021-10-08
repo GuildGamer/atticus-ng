@@ -36,6 +36,11 @@ interface CommentAPIData {
 	reason: string;//only provided if the request failed
 }
 
+interface LikeAPIData {
+	success: boolean;//if the request completed successfully
+	reason: string;//only provided if the request failed
+}
+
 @Component({
 	selector: 'app-post',
 	templateUrl: './post.component.html',
@@ -116,7 +121,7 @@ export class PostComponent implements OnInit {
 
 	like() {
 		if (this.loggedIn) {
-			this.comms.likePost(this.post_id, this.liked).subscribe((data) => {
+			this.comms.likePost(this.post_id, this.liked).subscribe((data: LikeAPIData) => {
 				if (data.success) {
 					this.liked = !this.liked;
 				}

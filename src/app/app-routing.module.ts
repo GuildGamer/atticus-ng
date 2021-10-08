@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { BlogComponent } from './blog/blog.component';
 import { BookingComponent } from './booking/booking.component';
 import { ContactComponent } from './contact/contact.component';
@@ -22,6 +23,7 @@ const routes: Routes = [
   { path: 'purchase', component: PurchaseComponent },
   { path: 'purchased', component: PurchasedComponent },
   { path: 'login', component: LoginComponent },
+  { path: 'admin-login', component: AdminLoginComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'create-blog-post', component: CreateBlogPostComponent },
   { path: 'blog', component: BlogComponent },
