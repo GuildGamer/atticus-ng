@@ -124,6 +124,14 @@ export class PostComponent implements OnInit {
 			this.comms.likePost(this.post_id, this.liked).subscribe((data: LikeAPIData) => {
 				if (data.success) {
 					this.liked = !this.liked;
+					if (this.post) {
+						if (this.liked) {
+							this.post.like_count++;
+						}
+						else {
+							this.post.like_count--;
+						}
+					}
 				}
 				else {
 					this.app.alert(data.reason, true);

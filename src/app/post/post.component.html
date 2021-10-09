@@ -12,7 +12,7 @@
 		<br>
 		<div *ngIf="loggedIn" class="right-text">
 			<a *ngIf="!liked" (click)="like()" class="uk-icon-button" uk-icon="star"></a>
-			<span *ngIf="liked">
+			<span (click)="like()" *ngIf="liked">
 				<img src="/favicon.ico" alt="Like">
 			</span>
 		</div>
