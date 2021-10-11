@@ -64,7 +64,7 @@ export class CommsService {
 	}
 
 	adminLogin(username: string, password: string): Observable<any> {
-		return this.request.request('admin-login', 'post', true, { username: username, password: password });
+		return this.request.request('admin-login/', 'post', true, { username: username, password: password });
 	}
 
 	validateAdmin(): Observable<any> {
@@ -88,11 +88,11 @@ export class CommsService {
 	}
 
 	likePost(post_id: string, like: boolean): Observable<any> {
-		return this.request.request('like-blog-post', 'post', false, { post_id: post_id, like: like });
+		return this.request.request('like-blog-post/', 'post', false, { post_id: post_id, like: like });
 	}
 
 	comment(post_id: string, comment: string): Observable<any> {
-		return this.request.request('comment-on-blog-post', 'post', false, { post_id: post_id, comment: comment });
+		return this.request.request('comment-on-blog-post/', 'post', false, { post_id: post_id, comment: comment });
 	}
 
 	//when the comment poster wants to delete their comment
