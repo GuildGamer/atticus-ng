@@ -72,7 +72,7 @@ export class CommsService {
 	}
 
 	createBlogPost(title: string, content: string): Observable<any> {
-		return this.request.request('create-blog-post/', 'post', true, { title: title, content: content });
+		return this.request.request('create-blog-post/', 'post', true, { heading: title, content: content });
 	}
 
 	deleteBlogPost(post_id: string): Observable<any> {
