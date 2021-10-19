@@ -58,14 +58,14 @@ export class ApiService {
 				else {
 					body = { a_id: a_token }
 				}
-				return this.http.post(`${this.api}/admin/${path}`, body);
+				return this.http.post(`${this.api}/${path}`, body);
 			}
 			else {
 				if (method === 'post') {
-					return this.http.post(`${this.api}/admin/${path}`, body);
+					return this.http.post(`${this.api}/${path}`, body);
 				}
 				else {
-					return this.http.get(`${this.api}/admin/${path}`);
+					return this.http.get(`${this.api}/${path}`);
 				}
 			}
 		}
