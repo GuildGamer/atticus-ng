@@ -32,6 +32,12 @@ export class NavbarComponent implements OnInit {
 		location.assign(this.address.SITE_ADDRESS);
 	}
 
+	aLogout() {
+		localStorage.removeItem('access_token');
+		localStorage.setItem('a_l_in', 'false');
+		location.assign(this.address.SITE_ADDRESS);
+	}
+
 	clicked() {
 		document.getElementById('closer')?.click();
 		document.getElementById('closer')?.blur();

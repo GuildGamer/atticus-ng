@@ -54,7 +54,8 @@ export class BlogComponent implements OnInit {
 			else {
 				this.app.alert(data.reason, true);
 			}
-		}, () => {
+		}, (e) => {
+			console.log(e);
 			this.loading = false;
 			this.app.alert("Please check your connection", true);
 		});
