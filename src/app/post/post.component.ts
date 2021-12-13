@@ -77,6 +77,7 @@ export class PostComponent implements OnInit {
 		this.comms.loadPost(this.post_id).subscribe((data: PostAPIData) => {
 			this.loading = false;
 			if (data.success) {
+				data.post.content = data.post.content.replace(/\n/g, '<br>');
 				this.post = data.post;
 				this.loggedIn = data.logged_in;
 				this.comments = data.comments;
